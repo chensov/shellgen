@@ -9,11 +9,11 @@ downloadBtn.addEventListener("click", () => {
 
   const myBlobText = `
 
-     Name: ${firstName}
-     Surname: ${surnameField}
-     Age: ${age}
-     Profile:${profile}
-     Fav Color: ${favColor}
+     echo Name: ${firstName}
+     echo Surname: ${surnameField}
+     echo Age: ${age}
+     echo Profile:${profile}
+     echo Fav Color: ${favColor}
   `;
   const blob = new Blob([myBlobText], { type: "text/plain" });
 
@@ -22,7 +22,7 @@ downloadBtn.addEventListener("click", () => {
   const downloadLink = document.createElement("a");
 
   downloadLink.href = url;
-  downloadLink.download = `${firstName}_${surnameField}_cv.html`;
+  downloadLink.download = `${firstName}_${surnameField}_cv.sh`;
 
   downloadLink.click();
 });
